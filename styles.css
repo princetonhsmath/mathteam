@@ -1,0 +1,46 @@
+:root, input, button {
+	font-family: "Lora";
+}
+
+body {
+	margin:0;
+}
+
+section#hero {
+	height:calc(100vh - max(5rem, 5vh));
+	width:100vw;
+
+	min-height: 5rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+}
+
+#hero h1 {
+	font-size: calc(min(10vh, 5vw));
+}
+
+section.body-section {
+	background:lightblue;
+	padding-block:2rem;
+	padding-inline: 1rem;
+}
+
+canvas.funky-anim {
+	position: absolute;
+	inset:0;
+	/* background:red; */
+	width:100%;
+	height: 100%;
+	z-index:-1;
+}
+
+a {
+	color: rgb(0, 136, 255);
+	&:hover {
+		font-weight: bold;
+	}
+}

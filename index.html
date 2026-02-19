@@ -3,12 +3,43 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>PHS Math Team</title>
+    <link rel="icon" href="static/icon.png">
+    <!-- <link rel="icon" href="static/icon.svg"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/73bd27aadc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    Being redirected to <a href="https://tournament.phsmt.org">https://tournament.phsmt.org</a>
-    <script> window.location.href = "https://tournament.phsmt.org"; </script>
+    <section id="hero">
+        <h1>Princeton High School Math Team</h1>
+        <canvas class="funky-anim"></canvas>
+    </section>
+    <section class="body-section">
+        <h2>Looking for something?</h2>
+        <p>
+            This site is very <b>under construction</b>. If you're on this page, you're probably looking for Princeton Math Tournament (<a href="https://tournament.phsmt.org">tournament.phsmt.org</a>)
+        </p>
+        <div id="bouta-leave">If you want to <b>stay here</b>, spam the space bar!</div>
+    </section>
+    <script>
+        let timeout = setTimeout(()=>{window.location.href="https://tournament.phsmt.org";},2000)
+        const onPress = e=>{
+            if (e.key!="Enter" && e.key!=" ") return;
+            clearTimeout(timeout);
+            document.querySelector("div#bouta-leave").innerHTML=`Staying here...`;
+            window.removeEventListener("keypress",onPress);
+        };
+        window.addEventListener("keypress",onPress);
+
+        
+    </script>
 </body>
 
 </html>
