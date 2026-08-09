@@ -28,18 +28,6 @@
         </p>
         <div id="bouta-leave">If you want to <b>stay here</b>, spam the space bar!</div>
     </section>
-    <script>
-        let timeout = setTimeout(()=>{window.location.href="https://tournament.phsmt.org";},2000)
-        const onPress = e=>{
-            if (e.key!="Enter" && e.key!=" ") return;
-            clearTimeout(timeout);
-            document.querySelector("div#bouta-leave").innerHTML=`Staying here...`;
-            window.removeEventListener("keypress",onPress);
-        };
-        window.addEventListener("keypress",onPress);
-
-        
-    </script>
 </body>
 
 </html>
